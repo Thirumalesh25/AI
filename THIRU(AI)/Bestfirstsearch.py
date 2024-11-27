@@ -4,7 +4,6 @@ def BFS(s,goal):
     v=[s]
     pq=PriorityQueue()
     pq.put((0,s))
-    path=[]
     while not pq.empty():
         _,n=pq.get()
         path.append(n)
@@ -20,6 +19,7 @@ def BFS(s,goal):
     return None
 
 g={}
+path=[]
 n=int(input("No.of Edges : "))
 for _ in range(n):
     x,y,c=map(int, input().split())
@@ -31,5 +31,5 @@ for _ in range(n):
     g[y].append((x,c))
 s=int(input("Start : "))
 goal=int(input("Goal : "))
-path=BFS(s,goal)
-print(path if path else "No path")
+if not BFS(s, goal) : print("Not Found")
+print(path)
