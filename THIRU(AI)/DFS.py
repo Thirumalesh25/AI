@@ -15,13 +15,13 @@ g = int(input("Goal node: "))
 
 path = []
 
-def dfs(s, adj, path,g):
+def dfs(s, g):
     path.append(s)
     if s==g:
         return True
     for i in adj[s]:
         if i not in path:
-            if dfs(i, adj, path,g): return True
+            if dfs(i, g): return True
     return False
-if not dfs(s, adj, path,g) : print("Not Found")
+if not dfs(s, g) : print("Not Found")
 print(path)
