@@ -16,7 +16,7 @@ dl= int(input("Enter depth limit: "))
 
 path = []
 
-def dls(s, adj, path, g, dl):
+def dls(s, g, dl):
     path.append(s)
     if s == g:
         return True
@@ -24,10 +24,10 @@ def dls(s, adj, path, g, dl):
         return False
     for i in adj[s]:
         if i not in path:
-            if dls(i, adj, path, g, dl - 1):
+            if dls(i, g, dl - 1):
                 return True
     return False
 
-if not dls(s, adj, path, g, dl):
+if not dls(s, g, dl):
     print("Not Found")
 print("Path:", path)
