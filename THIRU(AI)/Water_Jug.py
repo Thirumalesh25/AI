@@ -39,8 +39,8 @@ d = int(input("Enter target volume: "))
 
 r = minSteps(m, n, d)
 if r:
-    print("Steps:" , len(r))
     for i in r:
         print(i)
+    print("Steps:" , len(r))
 else:
     print("No solution.")
