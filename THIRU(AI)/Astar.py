@@ -1,6 +1,6 @@
 import heapq
 
-def Astar(graph, s, goal, h, cost):
+def Astar(s, goal):
     ol = [(h[s], s)]
     came_from = {}
     g = {s: 0}
@@ -44,5 +44,5 @@ for _ in range(len(adj)):
 s = int(input("Start node: "))
 goal = int(input("Goal node: "))
 
-path = Astar(adj, s, goal, h, None)
+path = Astar(s, goal)
 print("Path:", path if path else "No path found.")
