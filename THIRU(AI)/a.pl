@@ -1,8 +1,8 @@
-likes(ram,mango).
+likes(ram, mango).
+likes(bill, cindy).
 girl(seema).
-red(rose).
+red(roses).
 owns(john,gold).
-likes(bill,cindy).
 
 method 1
 swipl -s a.pl
