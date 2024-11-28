@@ -14,7 +14,7 @@ def Astar(s, goal):
                 path.append(n)
             return path[::-1]
 
-        for child, cost in graph[n]:
+        for child, cost in adj[n]:
             new_score = g[n] + cost
             if new_score < g.get(child, float('inf')):
                 g[child] = new_score
